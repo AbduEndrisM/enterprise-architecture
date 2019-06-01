@@ -1,20 +1,26 @@
-package mum.edu.data;
+package com.waa.abdu.data;
+
+
+import lombok.Getter;
+import lombok.Setter;
 
 public class User {
-String name;
-String password; 
+	@Getter
+	@Setter
+	private String name;
+	private String password;
 
-public String getName() {
-	return name;
-}
-public void setName(String name) {
-	this.name = name;
-}
-public String getPassword() {
-	return password;
-}
-public void setPassword(String password) {
-	this.password = password;
-}
+//public String getName() {
+//	return name;
+//}
+//public void setName(String name) {
+//	this.name = name;
+//}
+//public String getPassword() {
+//	return password;
+//}
+//public void setPassword(String password) {
+//	this.password = password;
+//}
 
 }

@@ -1,4 +1,4 @@
-package mum.edu.data;
+package com.waa.abdu.data;
 
 /**
  * Returns an implementation of a DataFacade.

@@ -1,4 +1,4 @@
-package mum.edu.data;
+package com.waa.abdu.data;
 
 import java.util.ArrayList;
 import java.util.List;
