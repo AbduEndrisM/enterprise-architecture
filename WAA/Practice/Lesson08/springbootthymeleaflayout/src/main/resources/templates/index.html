@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layouts/dashboard_layout}"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+
+<div class="col" layout:fragment="main-content">
+  <h1>Welcome to CS545, <span th:text="${firstName}" th:remove="tag"></span></h1>
+</div>
+
+</body>
+</html>
