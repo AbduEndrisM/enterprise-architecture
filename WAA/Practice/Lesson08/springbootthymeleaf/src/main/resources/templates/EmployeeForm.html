@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Employee Form</title>
+<link href="css/main.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../css/main.css" />
+</head>
+<body>
+
+	<div id="global">
+		<form action="#" th:action="@{/employee_save}" th:object="${employee}"
+			method="post">
+			<fieldset>
+				<legend><span th:text="#{employee.form.title}">Add a Employee</span></legend>
+				<ul th:if="${#fields.hasErrors('*')}">
+					<li th:each="err : ${#fields.errors('*')}" th:text="${err}" >Input
+						is incorrect</li>
+				</ul>
+				<p>
+					<label for="id"><span data-th-text="#{employee.form.id}">ID</span></label> <input type="text" id="id" th:field="*{id}" />
+					<p th:if="${#fields.hasErrors('id')}" th:errors="*{id}" th:errorclass="fieldError">Incorrect date</p>
+				</p>
+				<p>
+					<label for="firstName"><span th:text="#{employee.form.firstName}">First Name: </span></label> <input type="text"
+						th:field="*{firstName}" />
+					<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" th:errorclass="fieldError">Incorrect date</p>
+				</p>
+				<p>
+					<label for="lastName"><span th:text="#{employee.form.lastName}">Last Name: </span></label> <input type="text"
+						th:field="*{lastName}" />
+					<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" th:errorclass="fieldError">Incorrect date</p>
+				</p>
+
+				<p>
+					<label for="birthDate"><span th:text="#{employee.form.birthDate}">Date Of Birth: </span></label> <input type="text"
+						th:field="*{birthDate}" />
+					<p th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}" th:errorclass="fieldError">Incorrect date</p>
+				</p>
+				<p>
+					<label for="salaryLevel"><span th:text="#{employee.form.salaryLevel}">Salary: </span></label> <input type="text"
+						th:field="*{salaryLevel}" />
+					<p th:if="${#fields.hasErrors('salaryLevel')}" th:errors="*{salaryLevel}" th:errorclass="fieldError">Incorrect date</p>
+				</p>
+				<h4><span th:utext="#{employee.form.address}"></span></h4>
+				<p>
+					<label for="street"><span th:text="#{employee.form.street}">Street: </span></label> <input type="text"
+						th:field="*{address.street}" />
+					<p th:if="${#fields.hasErrors('address.street')}" th:errors="*{address.street}" th:errorclass="fieldError">Incorrect date</p>
+				</p>
+				<p>
+					<label for="state"><span th:text="#{employee.form.state}">State: </span></label> <input type="text"
+						th:field="*{address.state}" />
+					<p th:if="${#fields.hasErrors('address.state')}" th:errors="*{address.state}" th:errorclass="fieldError">Incorrect date</p>
+				</p>
+				<p>
+					<label for="zipCode"><span th:text="#{employee.form.zipCode}">Zip: </span></label> <input type="text"
+						th:field="*{address.zipCode}" />
+					<p th:if="${#fields.hasErrors('address.zipCode')}" th:errors="*{address.zipCode}" th:errorclass="fieldError">Incorrect date</p>
+				</p>
+				<p id="buttons">
+					<input id="reset" type="reset" th:value="#{employee.form.resetbtn}" value="Add Employee" tabindex="4"> <input
+						id="submit" type="submit" tabindex="5" th:value="#{employee.form.addbtn}" value="Add Employee">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+
+</body>
+</html>

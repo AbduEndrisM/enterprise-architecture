@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Simple Expression</title>
+</head>
+
+<body>
+    <h1>Standard Expression</h1>
+    <section>
+        <h2>Variable expressions</h2>
+        <div>
+            <p th:text="${emp.firstName}">First Name</p>
+            <p th:text="${emp.birthDate}">Last Name</p>
+            <p th:text="${emp.address.street}">Street</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Selection expressions</h2>
+        <div th:object="${emp}">
+            <p th:text="*{firstName}">First Name</p>
+            <p th:text="*{birthDate}">Last Name</p>
+            <p th:text="*{address.street}">Street</p>
+        </div>
+    </section>
+
+
+     <section>
+        <h2>Message expressions</h2>
+        <div>
+           <p th:text="#{course.id}"></p>
+           <p th:text="#{course.name}"></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Link (URL) expressions</h2>
+        <div>
+           <a th:href="@{/link/1}">Link 1</a>
+           <a th:href="@{/link/details(id=${emp.id},name=${emp.firstName})}">Link 2</a>
+           <a th:href="@{/order/{id}(id=${emp.id})}">Link 3</a>
+        </div>
+    </section>
+</body>
+
+</html>

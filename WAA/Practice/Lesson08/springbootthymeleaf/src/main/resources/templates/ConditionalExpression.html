@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Conditional Expression</title>
+</head>
+
+<body>
+
+    <section>
+        <h2>If-then</h2>
+        <div>
+            <p th:text="${emp.address}?'UNKNOWN'"></p>
+            <p th:text="${emp2.address}? ${emp2.address.street}"></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>If-then-else</h2>
+        <div>
+            <p th:text="${emp2.address}? ${emp2.address.street}: 'Not exists'"></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Elvis Operator</h2>
+        <div>
+            <p th:text="${emp.address}?: 'UNKNOWN'"></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>If-Unless</h2>
+        <div>
+            <span th:if="${gender == 'F'}">Female</span>
+            <span th:unless="${gender == 'F'}">Male</span>
+        </div>
+    </section>
+
+</body>
+
+</html>
