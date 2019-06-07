@@ -1,7 +1,6 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE HTML>
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Add Employee Form</title>
 <link rel="stylesheet" type="text/css" href="<c:url value="/css/main.css"/>">
@@ -9,37 +8,40 @@
 <body>
 
 	<div id="global">
-		<form:form modelAttribute="member">
+
+		<form action="#" th:action="@{/member}" th:object="${member}" method="post">
+
+		<!--		<form:form modelAttribute="member">-->
 			<fieldset>
 				<legend>Add an employee</legend>
 				<p>
-					<form:errors path="*" cssStyle="color : red;" />
+					<span path="*" cssStyle="color : red;" />
 				</p>
 				<p>
 					<label for="firstName">First Name: </label>
-					<form:input path="firstName" />
+					<input th:text="firstName" th:field="${member.firstName}" id="firstName"/>
 					<div style="text-align: center;">
-						<form:errors path="firstName" cssStyle="color : red;" />
+						<span th:text="firstName" cssStyle="color : red;" />
 					</div>
 				</p>
 				<p>
 					<label for="lastName">Last Name: </label>
-					<form:input path="lastName" />
+					<input th:text="lastName" th:field="${member.lastName}" id="lastName" />
 					<div style="text-align: center;">
-						<form:errors path="lastName" cssStyle="color : red;" />
+						<span th:text="lastName" cssStyle="color : red;" />
 					</div>
 				</p>
 
 				<p>
 					<label for="memberNumber">Member Number: </label>
-					<form:input path="memberNumber" id="memberNumber" />
-					<form:errors path="memberNumber" cssStyle="color : red;" />
+					<input th:text="memberNumber" th:field="${member.memberNumber}" id="memberNumber" />
+					<span th:text="memberNumber" cssStyle="color : red;" />
 				</p>
 				<p>
 					<label for="age">Age: </label>
-					<form:input path="age" id="age" />
+					<input th:text="age" th:field="${member.age}" id="age" />
 					<div style="text-align: center;">
-						<form:errors path="age" cssStyle="color : red;" />
+						<span th:text="age" cssStyle="color : red;" />
 					</div>
 				</p>
 				<p id="buttons">
@@ -47,7 +49,7 @@
 					<input id="submit" type="submit" tabindex="5" value="Add Member">
 				</p>
 			</fieldset>
-		</form:form>
+		</form>
 	</div>
 </body>
 </html>
