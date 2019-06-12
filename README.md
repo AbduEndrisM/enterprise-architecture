@@ -1,2 +1,2 @@
 # EnterpriseArchitecture
-Web Application Architecture and Enterprise Architecture
+Web Application and Enterprise Architecture
