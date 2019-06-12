@@ -1,0 +1,27 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+<section>
+    <div class="pull-right" style="padding-right:50px">
+        <a th:href="@{/market/products}">Products</a>|<a th:href="@{/cart}">Shopping Cart</a>
+    </div>
+</section>
+<div class="jumbotron">
+    <h1 th:text="${greeting}"></h1>
+    <p th:text="${tagline}"></p>
+</div>
+
+<form action="market/products" method="get">
+    <input id="submit" type="submit" value="Product List">
+</form>
+
+</body>
+</html>

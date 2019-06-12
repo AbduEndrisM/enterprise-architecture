@@ -1,0 +1,48 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+<section>
+    <div class="pull-right" style="padding-right:50px">
+        <a th:href="@{/market/products}">Products</a>|<a th:href="@{/cart}">Shopping Cart</a>
+    </div>
+</section>
+<section>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Products</h1>
+            <p>All the available products in our store</p>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-3" th:each="product : ${products}">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 th:text="${product.name}"></h3>
+                    <p th:text="${product.description}"></p>
+                    <p>$<span th:text="${product.unitPrice}" th:remove="tag"></span></p>
+                    <p>Available <span th:text="${product.unitsInStock}" th:remove="tag"></span> units in stock</p>
+                    <p>
+                        <a th:href="@{/market/product(id=${product.productId})}" class="btn btn-primary">
+                            <span class="glyphicon-info-sign glyphicon"/></span> Details
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

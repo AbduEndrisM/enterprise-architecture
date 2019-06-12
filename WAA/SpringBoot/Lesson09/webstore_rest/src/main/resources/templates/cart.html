@@ -1,0 +1,77 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script type="text/javascript"
+            src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/cart.js}"></script>
+</head>
+<body>
+
+<section>
+    <div class="pull-right" style="padding-right:50px">
+        <a th:href="@{/market/products}">Products</a>|<a th:href="@{/cart}">Shopping Cart</a>
+    </div>
+</section>
+<section>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="container">
+    <div>
+        <div>
+            <a href="#" class="btn btn-success pull-right"> <span
+                    class="glyphicon-shopping-cart glyphicon"></span> Check out
+            </a>
+        </div>
+        <table class="table table-hover">
+            <tr>
+                <th>---ID---</th>
+                <th>Name</th>
+                <th>Unit price</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </table>
+        <table id="cart_table" class="table table-hover">
+
+
+                <tr th:each="item: ${cart.cartItems}">
+                    <td th:text="${item.value.product.productId}"></td>
+                    <td th:text="${item.value.product.name}"></td>
+                    <td th:text="${item.value.product.unitPrice}"></td>
+                    <td th:text="${item.value.quantity}"></td>
+                    <td th:text="${item.value.totalPrice}"></td>
+                    <td><a href="#" class="label label-danger product-remove-btn" th:data="${item.value.product.productId}">
+                        <span class="glyphicon glyphicon-remove" /></span> Remove</a></td>
+                </tr>
+
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Grand Total</th>
+                <th th:text="${cart.grandTotal}"></th>
+                <th></th>
+            </tr>
+        </table>
+
+        <a th:href="@{/market/products}"
+        class="btn btn-default"> <span
+            class="glyphicon-hand-left glyphicon"></span> Continue shopping
+        </a>
+    </div>
+</section>
+
+</body>
+</html>
