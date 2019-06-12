@@ -1,0 +1,40 @@
+#global {
+    text-align: left;
+    border: 1px solid #dedede;
+    background: #efefef;
+    width: 600px;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+form {
+  font:100% verdana;
+  min-width: 500px;
+  max-width: 600px;
+  width: 560px;
+}
+
+#buttons {
+    text-align: right;
+}
+#errors, li {
+	color: red;
+}
+.error {
+    color: red;
+    font-size: 9pt;	
+}
+
+#result {
+	display: none;
+}
+
+#result p{
+		color: red;
+}
+
+#result h3 {
+	text-align: center;
+}
+
+

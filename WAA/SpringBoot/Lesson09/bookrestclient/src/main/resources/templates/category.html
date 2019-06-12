@@ -1,0 +1,39 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript"
+            src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/ajax.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+</head>
+<body>
+<div id="global">
+    <h1>Add Category</h1>
+    <!-- Success - or Validation errors -->
+    <div id="result">
+    </div>
+
+    <div id="formInput">
+        <!-- No action method handled by AJAX-->
+        <form id="categoryForm" method="post">
+            <p>
+                <label for="name"> Name : </label>
+                <input type="text" name="name" id="name" value="" />
+            </p>
+            <p>
+                <label for="description"> Description: </label>
+                <input id="description" name="description" type="text" />
+            </p>
+            <input type="button" id="categorySubmitBtn" value="Add Category"/>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
