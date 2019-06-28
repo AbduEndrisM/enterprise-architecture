@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="871a5c5c-8578-452d-9c9c-d0f111828327" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/lesson-two.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../practice/hello-world-java/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../practice/hello-world-java/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../practice/hello-world-java/.idea/uiDesigner.xml" afterDir="false" />
@@ -246,12 +242,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561693128829</updated>
       <workItem from="1561693130568" duration="217000" />
-      <workItem from="1561693367691" duration="2195000" />
+      <workItem from="1561693367691" duration="2492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2412000" />
+    <option name="totallyTimeSpent" value="2709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
