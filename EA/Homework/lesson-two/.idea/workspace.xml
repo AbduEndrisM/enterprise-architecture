@@ -12,8 +12,6 @@
       <change beforePath="$PROJECT_DIR$/../lesson-three/src/main/java/edu/mum/domain/UserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson-three/src/main/java/edu/mum/domain/UserCredentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lesson-three/src/main/java/edu/mum/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson-three/src/main/java/edu/mum/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lesson-three/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson-three/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/AppMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Customer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-128">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -44,48 +42,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/AppMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/AppBook.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="54" column="107" selection-start-line="54" selection-start-column="107" selection-end-line="54" selection-end-column="107" />
+            <state relative-caret-position="216">
+              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
               <folding>
                 <element signature="e#0#9#1" expanded="true" />
                 <element signature="e#0#9#1" expanded="true" />
                 <element signature="e#0#9#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Person.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,11 +57,20 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Book.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="91">
-              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1562018584205" expanded="true" signature="474:509" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -128,9 +99,9 @@
         <option value="$PROJECT_DIR$/src/test/resources/customer.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs/AppMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs/AppBook.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs/AppMain.java" />
       </list>
     </option>
   </component>
@@ -256,7 +227,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560103814722" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lesson-three" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -336,16 +307,15 @@
       <workItem from="1561750465375" duration="493000" />
       <workItem from="1561770455119" duration="2363000" />
       <workItem from="1561994418231" duration="748000" />
-      <workItem from="1562010141336" duration="6571000" />
+      <workItem from="1562010141336" duration="7031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15225000" />
+    <option name="totallyTimeSpent" value="15685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8306636" visible="true" weight="0.1867518" />
       <window_info id="Structure" order="1" sideWeight="0.34713376" side_tool="true" weight="0.31990883" />
@@ -358,8 +328,8 @@
       <window_info id="simpleUML" order="8" />
       <window_info id="Persistence" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Problems" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.41205212" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924013" visible="true" weight="0.4169381" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.41205212" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924013" weight="0.41530946" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
@@ -368,7 +338,7 @@
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32827735" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.35188216" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.35179153" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="13" />
       <window_info anchor="bottom" id="Cvs" order="14" weight="0.25" />
@@ -392,20 +362,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/mum/cs/AppMain.java</url>
-          <line>17</line>
-          <properties class="edu.mum.cs.AppMain" method="main">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/resources/customer.hbm.xml">
@@ -432,7 +388,7 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-128">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -446,13 +402,6 @@
     <entry file="file://$PROJECT_DIR$/hibernatesoloxml_new.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/Persistence.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -463,7 +412,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/domain/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1562018584205" expanded="true" signature="474:509" ph="..." />
@@ -483,8 +432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/AppMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -508,15 +457,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/AppBook.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs/AppMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="54" column="107" selection-start-line="54" selection-start-column="107" selection-end-line="54" selection-end-column="107" />
+        <state relative-caret-position="216">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
           <folding>
             <element signature="e#0#9#1" expanded="true" />
             <element signature="e#0#9#1" expanded="true" />
             <element signature="e#0#9#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
