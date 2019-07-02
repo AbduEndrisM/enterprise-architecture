@@ -1,97 +1,54 @@
 package edu.mum.domain;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Version;
+import javax.persistence.*;
 
+@Data
+@NoArgsConstructor
+@Entity
+@Table(name = "users")
   public class User implements Serializable  {
 
-    private Long id = null;
+	@Id
+	@Column(name = "USER_ID", length = 20 )
+	@GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id ;
 
+	@Column(name = "FIRSTNAME", nullable = false)
      private String firstName;
 
+	@Column(name = "LASTNAME", nullable = true)
      private String lastName;
 
+	 @Column(name = "EMAIL", nullable = false)
      private String email;
 
+	 @Column(name = "RATING",length = 11, nullable = false )
      private int rating = 0;
-
+	 @Column(name = "IS_ADMIN", length = 1, nullable = false)
      private boolean admin = false;
      
-     @Version
+     @Version()
+	 @Column(length = 11, nullable = false)
      private int version = 0;
 
-     private Date lastLogin;
-     
-	public Long getId() {
-		return id;
-	}
+     @Column(nullable = true)
+     private LocalDate lastLogin;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstname) {
-		this.firstName = firstname;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastname) {
-		this.lastName = lastname;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public int getRating() {
-		return rating;
-	}
-
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
-
-	public boolean isAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(boolean admin) {
-		this.admin = admin;
-	}
-
-	public int getVersion() {
-		return version;
-	}
-
-	public void setVersion(int version) {
-		this.version = version;
-	}
-
-	public Date getLastLogin() {
-		return lastLogin;
-	}
-
-	public void setLastLogin(Date lastLogin) {
-		this.lastLogin = lastLogin;
-	}
-
+    public User(String firstName, String lastName, String email, int rating, boolean admin, int version, LocalDate lastLogin) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.rating = rating;
+        this.admin = admin;
+        this.version = version;
+        this.lastLogin = lastLogin;
+    }
 }
