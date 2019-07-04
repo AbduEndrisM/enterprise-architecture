@@ -1,14 +1,12 @@
-package com.ea.abdu.domain.first;
+package com.ea.abdu.domain.six;
 
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
-//@Entity
+@Entity
 @NoArgsConstructor
 @Data
 
@@ -20,13 +18,17 @@ public class Employee {
     private String fName;
     private String lName;
 
-    @ManyToOne
-    @JoinColumn(name = "department_id")
-    private Department department;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn
+    private Office office;
 
-
-    public Employee(String fName, String lName) {
+    public Employee(String fName, String lName, Office office) {
         this.fName = fName;
         this.lName = lName;
+        this.office = office;
     }
+
+
+
+
 }

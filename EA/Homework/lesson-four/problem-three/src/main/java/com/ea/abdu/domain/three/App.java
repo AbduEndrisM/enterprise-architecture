@@ -1,35 +1,37 @@
 package com.ea.abdu.domain.three;
 
+import com.ea.abdu.domain.second.Book;
+import com.ea.abdu.domain.second.Publisher;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.List;
-import java.util.Map;
 
 public class App {
+
 
     private static EntityManagerFactory emf;
 
     public static void main(String[] args) throws Exception {
-
         emf = Persistence.createEntityManagerFactory("lesson-four");
 
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        // Create new instance of Car and set values in it
-        School mum = new School("MUM", "Fairfield, IA, USA");
-        Student student1 = new Student(11L, "Abdu", "Edris");
-        Student student2 = new Student(22L, "Tina", "Edris");
-        Student student3 = new Student(33L, "Jado", "Edris");
+        Student student1 = new Student("Abdu","Edris");
+        Student student2 = new Student("Sobah","Edris");
+        Course course1 = new Course("CS544", "EA");
+        Course course2 = new Course("CS545", "WAA");
 
-        mum.insert(student1);
-        mum.insert(student2);
-        mum.insert(student3);
+        course1.addStudent(student1);
+        course1.addStudent(student2);
 
-        // save  school
-        em.persist(mum);
+        course2.addStudent(student2);
+
+        em.persist(course1);
+        em.persist(course2);
 
         em.getTransaction().commit();
         em.close();
@@ -37,17 +39,16 @@ public class App {
         em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        TypedQuery<School> typedQuery = em.createQuery("FROM School", School.class);
-        List<School> resultList = typedQuery.getResultList();
+        TypedQuery<Course>courseTypedQuery = em.createQuery(" FROM Reservation ", Course.class);
+        List<Course>courseList = courseTypedQuery.getResultList();
+        courseList.forEach(course -> {
+            System.out.println(course);
+        });
 
-        for (School school : resultList) {
-            for (Map.Entry<Long, Student> student : school.getStudentlist().entrySet()) {
-                System.out.println("School Name " + school.getName() + " \n Students: " + student.getKey() + "  Student Name  "+
-                        student.getValue().getFName() + " "+ student.getValue().getLName());
-            }
 
-        }
         em.getTransaction().commit();
         em.close();
+
     }
+
 }

@@ -4,48 +4,51 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
-import java.security.acl.Owner;
-import java.util.Collection;
 import java.util.List;
 
 public class App {
 
+
     private static EntityManagerFactory emf;
 
     public static void main(String[] args) throws Exception {
-
         emf = Persistence.createEntityManagerFactory("lesson-four");
 
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        // Create new instance of Car and set values in it
-        Passenger abdu = new Passenger("Abdu", "Edris");
-        Flight flight1 = new Flight("Addis", "Istanbul");
-        Flight flight2 = new Flight("Istanbul", "Frankfurt");
-        Flight flight3 = new Flight("Frankfurt", "Chicago");
+        Publisher publisher = new Publisher("Coelho");
+        Publisher publisher2 = new Publisher("Mega");
+        Book book1 = new Book("The Alchemist", 123L, publisher);
+        Book book2 = new Book("Veronica", 12345L, publisher);
+        Book book3 = new Book("The spy", 345L, publisher);
 
-        abdu.addFlight(flight1);
-        abdu.addFlight(flight2);
-        abdu.addFlight(flight3);
+        Book book4 = new Book("Piyassa", 12345L, publisher2);
+        Book book5 = new Book("Bole", 345L, publisher2);
 
-        // save  passenger
-        em.persist(abdu);
+        em.persist(book1);
+        em.persist(book2);
+        em.persist(book3);
+        em.persist(book4);
+        em.persist(book5);
 
         em.getTransaction().commit();
         em.close();
 
         em = emf.createEntityManager();
         em.getTransaction().begin();
-        TypedQuery<Passenger> typedQuery = em.createQuery("FROM Passenger", Passenger.class);
-        List<Passenger> resultList = typedQuery.getResultList();
 
-        resultList.forEach(passenger -> {
-            passenger.getFlights().forEach(flight -> {
-                System.out.println("Name " + passenger.getName() + " " + passenger.getLastName() + "  is going  "
-                        + flight.getFrom() + " to " + flight.getTo());
-
-            });
+        TypedQuery<Book>bookTypedQuery = em.createQuery("SELECT distinct b FROM Book  b JOIN b.publisher as p WHERE p.name =:mega", Book.class);
+        bookTypedQuery.setParameter("mega", "Mega");
+        List<Book>bookList = bookTypedQuery.getResultList();
+        bookList.forEach(book -> {
+            System.out.println(book);
         });
+
+
+        em.getTransaction().commit();
+        em.close();
+
     }
+
 }

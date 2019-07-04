@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+//@Entity
 @NoArgsConstructor
 @Data
 public class Department {
@@ -17,7 +17,7 @@ public class Department {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "department")
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
     List<Employee> employeeList = new ArrayList<>();
 
     public Department(String name) {
