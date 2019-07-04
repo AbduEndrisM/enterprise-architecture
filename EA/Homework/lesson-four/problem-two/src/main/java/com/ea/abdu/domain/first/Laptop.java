@@ -3,10 +3,7 @@ package com.ea.abdu.domain.first;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -19,8 +16,8 @@ public class Laptop {
     private double price;
 
     @ManyToOne
+    @JoinColumn
     private Employee employee;
-
 
     public Laptop(String brand, double price) {
         this.brand = brand;

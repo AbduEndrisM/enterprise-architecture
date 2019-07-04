@@ -22,7 +22,6 @@ public class Employee {
     private String lastName;
 
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn
     private Set<Laptop> laptopSet = new HashSet<>();
 
     public Employee(String name, String lastName) {
