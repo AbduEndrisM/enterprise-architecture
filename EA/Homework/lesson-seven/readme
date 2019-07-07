@@ -1,0 +1,61 @@
+ORM Optimization
+This project is done to compare the various ORM N+1 problem solving methods
+
+I used Entity graph, FetchJoin, BatchSize and Fetc.SUBSELECT methods.
+
+Note: Different outputs are discovered for multiple excution of the same method!
+
+
+Experiment I- input: List of 100,000 pets (Owner has Pets - 1:N)
+
+EntityGraph:
+To fetch this data from the database took 109 milliseconds.
+
+FetchJoin
+To fetch this data from the database took 108 milliseconds.
+
+
+SizeBatch (size =50)
+To fetch this data from the database took 119 milliseconds.
+
+Fetch.SUBSELECT
+To fetch this data from the database took 103 milliseconds.
+
+
+///////////////////////////////////////////////////////////////
+
+
+Experiment II- input: List of 1000,000 pets (Owner has Pets - 1:N)
+
+EntityGraph:
+To fetch this data from the database took 103 milliseconds.
+
+FetchJoin
+To fetch this data from the database took 106 milliseconds.
+
+
+SizeBatch (size =50)
+To fetch this data from the database took 111 milliseconds.
+
+Fetch.SUBSELECT
+To fetch this data from the database took 119 milliseconds.
+
+
+
+///////////////////////////////////////////////////////////////
+
+
+Experiment III- input: List of 9000,000 pets (Owner has Pets - 1:N)
+
+EntityGraph:
+To fetch this data from the database took 108 milliseconds.
+
+FetchJoin
+To fetch this data from the database took 102 milliseconds.
+
+
+SizeBatch (size =50)
+To fetch this data from the database took 102 milliseconds.
+
+Fetch.SUBSELECT
+To fetch this data from the database took 119 milliseconds.
