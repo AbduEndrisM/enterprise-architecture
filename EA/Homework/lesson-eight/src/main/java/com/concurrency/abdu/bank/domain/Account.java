@@ -1,11 +1,26 @@
 package com.concurrency.abdu.bank.domain;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 import java.util.*;
 
 
+
+@Entity
+@NoArgsConstructor
+@Data
 public class Account {
+
+    @Id
     private long accountnumber;
-    private Collection<AccountEntry> entryList = new ArrayList<AccountEntry>();
+
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn
+     private Collection<AccountEntry> entryList = new ArrayList<AccountEntry>();
+
+    @OneToOne(cascade = CascadeType.PERSIST)
     private Customer customer;
 
 
@@ -13,13 +28,7 @@ public class Account {
         this.accountnumber = accountnr;
     }
 
-    public long getAccountnumber() {
-        return accountnumber;
-    }
 
-    public void setAccountnumber(long accountnumber) {
-        this.accountnumber = accountnumber;
-    }
 
     public double getBalance() {
         double balance = 0;

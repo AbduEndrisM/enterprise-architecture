@@ -15,8 +15,8 @@ public class App {
         IAccountService accountService = new AccountService();
 
         // create 2 accounts;
-        accountService.createAccount(1263862, "Frank Brown");
-        accountService.createAccount(4253892, "John Doe");
+        accountService.createAccount(1263862, "Abdu Edris");
+        accountService.createAccount(4253892, "Tina Xing");
 
         //use account 1;
         accountService.deposit(1263862, 240);
