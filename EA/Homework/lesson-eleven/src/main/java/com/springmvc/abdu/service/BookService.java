@@ -21,13 +21,16 @@ public class BookService {
         bookRepository.save(book);
     }
 
-    public Book  getBook(Integer id) {
+    public Book getBook(Integer id) {
         return  bookRepository.findById(id).get();
-
     }
 
     public List<Book> allBooks(){
         return bookRepository.findAll();
+    }
+
+    public void deleteBook(Integer id){
+        bookRepository.deleteById(id);
     }
 
 

@@ -14,10 +14,10 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">Make</th>
-            <th scope="col">Model</th>
-            <th scope="col">Year</th>
-            <th scope="col">Color</th>
+            <th scope="col">Id</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
             <th scope="col">Operation</th>
         </tr>
         </thead>
@@ -28,7 +28,8 @@
                 <td>${book.isbn}</td>
                 <td>${book.title}</td>
                 <td>${book.author}</td>
-                <td><a href="book/${book.id}">edit</a></td>
+                <td><a href="update/${book.id}">edit</a></td>
+                <td><a href="delete/${book.id}">delete</a></td>
             </tr>
         </c:forEach>
         </tbody>
